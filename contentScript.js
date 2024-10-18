@@ -1,7 +1,7 @@
 let T_On
 
 let divi
-
+console.log("Loaded")
 function CreateWin(){
     divi = document.createElement("div");
             divi.className = "div"; // Apply the CSS class
@@ -21,3 +21,8 @@ function SignalRec(signal){
         chrome.action.setIcon({path: {128: "pragrest.png"}})
     }
 }
+
+//Listener for comm. with background
+chrome.runtime.onMessage.addListener(function (request, sender) {
+    console.log(request.data);  
+});
