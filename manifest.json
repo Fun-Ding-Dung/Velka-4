@@ -1,23 +1,30 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions",
-    "description": "Base Level Extension",
+    "name": "Pragrest",
     "version": "1.0",
-    "permissions": [
-        "tabs",
-        "activeTab"
+    "description": "Streamlined article pushing",
+    "content_scripts": [
+      {
+        "js": ["scripts/content.js"],
+        "matches": ["<all_urls>"],
+        "css" : ["styles.css"]
+      }
     ],
+    "background": {
+      "service_worker": "background.js"
+    },
     "action": {
         "default_icon": "pragrest.png"
     },
-    "content_scripts": [
-        {
-        "matches": ["https://www.example.com/*"],
-        "js": ["contentScript.js"],
-        "css": ["styles.css"]
-        }
+
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting"
     ],
-    "background": {
-    "service_worker": "background.js"
-    }
+    "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+    ]
   }
+  
