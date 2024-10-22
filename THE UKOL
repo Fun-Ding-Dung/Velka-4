@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h1 {
+    color: blueviolet;
+    }
+    div {
+        color: rgb(69, 37, 97);
+    }
+    </style>
 </head>
 <body>
     <h1>Lukáš je neschopnej</h1>
-    <p>Důvody proč Lukáš smrdí:</p>
-    <p>je asiat🦨</p>
-    <p>lukás je adoptovanej</p>
-    <img src="gorila.jpg" alt="">
+    <div>
+        <p>Důvody proč Lukáš smrdí:</p>
+        <p>je asiat🦨</p>
+        <p>lukás je adoptovanej</p>
+        <img src="Borila.jpg" alt="">
+    </div>
+    
 
 </body>
 </html>
